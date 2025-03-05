@@ -1,0 +1,95 @@
+:root{
+    --main-radius: 10px;
+    --main-padding: 20px;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(30, 30, 30);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.container{
+    background-color: rgb(8, 8, 8);
+    display: grid;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    grid-template-columns:300px;
+    grid-template-rows: 100px, 100px, 100px;
+    grid-template-areas: 
+    "container";
+    grid-gap: 0.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    font-size:20px;
+    color: #d5d5d5;
+    text-align: center;
+}
+
+
+button{
+    background-color:rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: var(--main-radius);
+    text-transform: uppercase;
+
+
+}
+
+button:hover{
+    background-color:rgb(0, 0, 0);
+    color: rgb(4, 216, 0);
+}
+
+.password-container{
+    background-color: rgb(30, 30, 30);
+    color: rgb(4, 216, 0);
+    padding: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+    word-wrap: break-word; /* Permite que el texto se divida en varias líneas */
+    overflow-wrap: break-word; /* Alternativa para navegadores más nuevos */
+    white-space: normal;
+}
+#range-container,  #lista, #generator {
+    color: rgb(224, 224, 224);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: rgb(77, 1, 1);
+    
+}
+
+
+@media only screen and (max-width: 550px) {
+    .container {
+        font-size: 14px; 
+        padding: 5px; 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        grid-template-areas:
+            "container";
+    }
+
+    #range-container,  #lista, #generator, #password-container{
+        padding: 10px 15px; 
+        font-size: 14px; 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+}
